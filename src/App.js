@@ -3,12 +3,12 @@ import React from "react";
 import AboutUs from "./pages/AboutUs";
 
 // import Styled
-import GlobalStyle from "./components/GlobalStyle";
+import StyledGlobal from "./styles/StyledGlobal";
 
 function App() {
   return (
     <div className="App">
-      <GlobalStyle />
+      <StyledGlobal />
       <AboutUs />
     </div>
   );
