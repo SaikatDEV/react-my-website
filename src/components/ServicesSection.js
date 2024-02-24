@@ -102,6 +102,4 @@ const StyledCard = styled.div`
   }
 `;
 
-const StyledIcon = styled.div``;
-
 export default ServicesSection;
