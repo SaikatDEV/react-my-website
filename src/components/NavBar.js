@@ -1,23 +1,26 @@
 import React from "react";
 import styled from "styled-components";
+import asmLogo from "../img/ASM-logo.jpg";
+// import below So Router works
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <StyledNavBar>
       <h1>
-        <a id="logo" href="#">
-          ASM
-        </a>
+        <Link className="asmLogo" id="logo" to="/">
+          <img src={asmLogo} alt="ASM Logo" />
+        </Link>
       </h1>
       <ul>
         <li>
-          <a href="#">1. About Us</a>
+          <Link to="/">About Us</Link>
         </li>
         <li>
-          <a href="#">2. Our Work</a>
+          <Link to="/work">Our Work</Link>
         </li>
         <li>
-          <a href="#">3. Contact Us</a>
+          <Link to="/contact">Contact Us</Link>
         </li>
       </ul>
     </StyledNavBar>
@@ -32,17 +35,21 @@ const StyledNavBar = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
-  /* flex: 3; */
+
+  .asmLogo img {
+    height: 4rem;
+    /* object-fit: cover; */
+  }
   a {
     color: white;
     text-decoration: none;
   }
   ul {
-    /* flex: 1; */
     display: flex;
     list-style: none;
   }
   #logo {
+    padding-left: 1rem;
     font-size: 1.6rem;
     font-family: "Lobster", cursive;
     font-weight: lighter;

@@ -7,6 +7,21 @@ const StyledGlobal = createGlobalStyle`
         box-sizing: border-box;
     }
     
+    // @media (prefers-reduced-motion: no-preference) {
+    //     .asmLogo {
+    //       animation: App-logo-spin infinite 20s linear;
+    //     }
+    //   }
+      
+    // @keyframes App-logo-spin {
+    //     from {
+    //       transform: rotate(0deg);
+    //     }
+    //     to {
+    //       transform: rotate(360deg);
+    //     }
+    // }
+    
     body {
         background: #1b1b1b;
         font-family: "Inter", Sans-serif;
