@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 // import StyledAbout
 import { StyledAbout } from "../styles/StyledAbout";
+import Toggle from "../components/reusable/Toggle";
 
 const FaqSection = () => {
   return (
@@ -11,9 +12,7 @@ const FaqSection = () => {
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
-
-      <div className="question">
-        <h4>How do I Start?</h4>
+      <Toggle title="How do I Start?">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
@@ -21,11 +20,9 @@ const FaqSection = () => {
             veritatis eum, molestiae assumenda doloremque maiores,
           </p>
         </div>
-        <div className="faq-line"></div>
-      </div>
+      </Toggle>
 
-      <div className="question">
-        <h4>Daily Schedule</h4>
+      <Toggle title="Daily Schedule">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
@@ -33,11 +30,9 @@ const FaqSection = () => {
             veritatis eum, molestiae assumenda doloremque maiores,
           </p>
         </div>
-        <div className="faq-line"></div>
-      </div>
+      </Toggle>
 
-      <div className="question">
-        <h4>Different Payment mathod</h4>
+      <Toggle title="Different Payment mathod">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
@@ -45,11 +40,9 @@ const FaqSection = () => {
             veritatis eum, molestiae assumenda doloremque maiores,
           </p>
         </div>
-        <div className="faq-line"></div>
-      </div>
+      </Toggle>
 
-      <div className="question">
-        <h4>What product do you offer?</h4>
+      <Toggle title="What product do you offer?">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
@@ -57,8 +50,7 @@ const FaqSection = () => {
             veritatis eum, molestiae assumenda doloremque maiores,
           </p>
         </div>
-        <div className="faq-line"></div>
-      </div>
+      </Toggle>
     </StyledFaq>
   );
 };

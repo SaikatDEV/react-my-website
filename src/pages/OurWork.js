@@ -9,35 +9,35 @@ import goodtimes from "../img/goodtimes-small.png";
 
 const OurWork = () => {
   return (
-    <Work>
-      <Movie>
+    <StyledWork>
+      <StyledMovie>
         <h2>The Athlete</h2>
         <div className="line"></div>
-        <Link>
+        <Link to="/work/athlete">
           <img src={athlete} alt="Picture of an Athlete" />
         </Link>
-      </Movie>
+      </StyledMovie>
 
-      <Movie>
+      <StyledMovie>
         <h2>The Racer</h2>
         <div className="line"></div>
-        <Link>
+        <Link to="/work/theracer">
           <img src={theracer} alt="Picture of a racer" />
         </Link>
-      </Movie>
+      </StyledMovie>
 
-      <Movie>
+      <StyledMovie>
         <h2>Good Times</h2>
         <div className="line"></div>
-        <Link>
+        <Link to="/work/goodtimes">
           <img src={goodtimes} alt="Picture of Good times" />
         </Link>
-      </Movie>
-    </Work>
+      </StyledMovie>
+    </StyledWork>
   );
 };
 
-const Work = styled.div`
+const StyledWork = styled.div`
   min-height: 100vh;
   /* We will animate this So we want this below: */
   overflow: hidden;
@@ -49,7 +49,7 @@ const Work = styled.div`
   /* background: white; */
 `;
 
-const Movie = styled.div`
+const StyledMovie = styled.div`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;

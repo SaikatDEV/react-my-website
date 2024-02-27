@@ -6,6 +6,7 @@ import AboutUs from "./pages/AboutUs";
 import NavBar from "./components/NavBar";
 import OurWork from "./pages/OurWork";
 import ContactUs from "./pages/ContactUs";
+import MovieDetail from "./pages/MovieDetail";
 // Router
 import { Routes, Route } from "react-router-dom";
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" exact element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/work" element={<OurWork />} />
+        <Route path="/work/:id" element={<MovieDetail />} />
       </Routes>
     </div>
   );
