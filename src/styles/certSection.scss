@@ -1,0 +1,27 @@
+@use "global";
+
+.certSection {
+  .certDesc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-size: 5rem;
+    }
+
+    .exploreCert {
+      margin-left: 2rem;
+    }
+  }
+
+  u {
+    font-size: 1.5rem;
+  }
+}

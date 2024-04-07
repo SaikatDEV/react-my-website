@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+  }
+  &::-webkit-scrollbar-track {
+    background: white;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(30, 30, 32, 0.957);
+  width: 100%;
+  color: white;
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: "Pacifico", cursive;
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: 1.2rem;
+  padding: 0.5rem 0rem;
+  font-family: "Abril Fatface", serif;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 175%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navButton {
+  padding: 1rem 2rem;
+  background-color: rgba(199, 178, 178, 0.3);
+  border-radius: 10px;
+  color: white;
+  border: 1px solid white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background-color 0.75s ease, color 0.75s ease;
+
+  &:hover {
+    background-color: rgb(116, 123, 182);
+  }
+}

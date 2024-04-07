@@ -1,0 +1,34 @@
+@use "global";
+
+.contact {
+  min-height: 50vh;
+  padding: 5rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    pointer-events: none;
+    margin-right: 20rem;
+  }
+}
+
+.navLinks {
+  h3 {
+    font-size: 2.5rem;
+    padding: 1rem 0rem;
+    cursor: pointer;
+  }
+
+  a {
+    font-size: 2.5rem;
+    color: white;
+    text-decoration: underline;
+    transition: background-color 0.25s ease, color 0.25s ease;
+
+    &:hover {
+      color: rgb(150, 228, 152);
+      opacity: 0.75;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "Saikat Barua's Website",
   "icons": [
     {
       "src": "../src/img/ASM-logo.jpg",
@@ -9,12 +9,12 @@
     },
     {
       "src": "../src/img/ASM-logo.jpg",
-      "type": "image/png",
+      "type": "image/jpg",
       "sizes": "192x192"
     },
     {
       "src": "../src/img/ASM-logo.jpg",
-      "type": "image/png",
+      "type": "image/jpg",
       "sizes": "512x512"
     }
   ],

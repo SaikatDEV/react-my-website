@@ -1,64 +1,31 @@
 import React from "react";
-import styled from "styled-components";
+import "../styles/navBar.scss";
 import asmLogo from "../img/ASM-logo.jpg";
 // import below So Router works
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <StyledNavBar>
+    <div className="navBar">
       <h1>
         <Link className="asmLogo" id="logo" to="/">
           <img src={asmLogo} alt="ASM Logo" />
+          <h2>Saikat Barua</h2>
         </Link>
       </h1>
       <ul>
         <li>
-          <Link to="/">About Us</Link>
+          <Link to="/">About</Link>
         </li>
         <li>
-          <Link to="/work">Our Work</Link>
+          <Link to="/projects">Projects</Link>
         </li>
         <li>
-          <Link to="/contact">Contact Us</Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
-    </StyledNavBar>
+    </div>
   );
 };
-
-const StyledNavBar = styled.div`
-  background-color: #282828;
-  min-height: 10vh;
-  display: flex;
-  margin: auto;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 10rem;
-
-  .asmLogo img {
-    height: 4rem;
-    /* object-fit: cover; */
-  }
-  a {
-    color: white;
-    text-decoration: none;
-  }
-  ul {
-    display: flex;
-    list-style: none;
-  }
-  #logo {
-    padding-left: 1rem;
-    font-size: 1.6rem;
-    font-family: "Lobster", cursive;
-    font-weight: lighter;
-  }
-  li {
-    padding-left: 6rem;
-    /* As we will be doing some animation here */
-    position: relative;
-  }
-`;
 
 export default NavBar;

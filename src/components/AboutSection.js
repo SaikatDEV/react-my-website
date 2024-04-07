@@ -1,47 +1,37 @@
 import React from "react";
-import home1 from "../img/home1.png";
-import { motion } from "framer-motion";
-import {
-  StyledAbout,
-  StyledDescription,
-  StyledHide,
-  StyledImage,
-} from "../styles/StyledAbout";
+import image from "../img/saikat.jpg";
+import "../styles/aboutSection.scss";
 
 const AboutSection = () => {
   return (
-    <StyledAbout>
-      <StyledDescription>
+    <div className="aboutProfile">
+      <div className="profileImg">
+        <img src={image} alt="Saikat profile photo" />
+        <div className="reveal-img"></div>
+      </div>
+
+      <div className="desc">
         <div className="title">
-          <StyledHide>
-            <motion.h2
-              animate={{ opacity: 1, transition: { duration: 2 } }}
-              initial={{ opacity: 0 }}
-            >
-              We work to make
-            </motion.h2>
-          </StyledHide>
-          <StyledHide>
-            <h2>
-              your <span>dreams</span> come
-            </h2>
-          </StyledHide>
-          <StyledHide>
-            <h2>true</h2>
-          </StyledHide>
+          <h2>About me...</h2>
         </div>
         <p>
-          Contact us for any photography or videography ideas that you have.
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit sint
-          iusto rem nisi laborum quod iste reiciendis explicabo, molestias
-          harum!
+          I am a Technology-minded individual with a passion for Front End Web
+          Development using REACT, VueJS, HTML, CSS, Javascript. <br /> <br />{" "}
+          As well expert on designing Test Automation Framework from scratch
+          using Selenium or any other framework like GEB, Cucumber BDD using
+          Ruby/Java, Serenity, PlayWright, Karate, Rspec, Java Junit/TestNG,
+          RestAssured API, Jmeter, QTP. As well experienced on AWS, CI-CD
+          environment using Jenkins, Bamboo, Saucelabs etc.
         </p>
-        <button>Contact Us</button>
-      </StyledDescription>
-      <StyledImage>
-        <img src={home1} alt="Guy with a camera" />
-      </StyledImage>
-    </StyledAbout>
+        <a
+          href="https://docs.google.com/document/d/1CtdfXebvplwk0VU0mjf9Q3sI3qIhjWiD/edit"
+          target="_blank"
+          className="explore navButton"
+        >
+          Resume
+        </a>
+      </div>
+    </div>
   );
 };
 

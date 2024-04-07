@@ -1,0 +1,42 @@
+.navBar {
+  background-color: #17181a;
+  min-height: 10vh;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10rem;
+  .asmLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h2 {
+    margin-left: 2rem;
+    font-size: 2rem;
+    /* padding: 2rem; */
+  }
+  .asmLogo img {
+    height: 4rem;
+    /* object-fit: cover; */
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  #logo {
+    padding-left: 1rem;
+    font-size: 1.6rem;
+    font-family: "Lobster", cursive;
+    font-weight: lighter;
+  }
+  li {
+    padding-left: 6rem;
+    /* As we will be doing some animation here */
+    position: relative;
+  }
+}

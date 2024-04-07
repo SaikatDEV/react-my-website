@@ -1,0 +1,20 @@
+@use "global";
+
+.skillsSection {
+  margin: 5rem 10rem 5rem 10rem;
+  min-height: 20vh;
+
+  .skillsDesc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .title h2 {
+      font-size: 5rem;
+    }
+
+    u {
+      font-size: 1.5rem;
+    }
+  }
+}

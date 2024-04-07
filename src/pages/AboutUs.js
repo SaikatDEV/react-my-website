@@ -1,15 +1,15 @@
 import React from "react";
 // page Components
 import AboutSection from "../components/AboutSection";
-import ServicesSection from "../components/ServicesSection";
-import FaqSection from "../components/FaqSection";
+import SkillsSection from "../components/SkillsSection";
+import CertSection from "../components/CertSection";
 
 const AboutUs = () => {
   return (
     <>
       <AboutSection />
-      <ServicesSection />
-      <FaqSection />
+      <SkillsSection />
+      <CertSection />
     </>
   );
 };

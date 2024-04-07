@@ -1,0 +1,58 @@
+@use "global";
+
+.aboutProfile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+  padding: 5rem 10rem;
+}
+
+.desc {
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* flex-basis has a higher priority than width or height (if set). 
+  We usually set flex-basis to the minimum length we find acceptable 
+  for an element. If we set it to 100% and at the same time have 
+  flex-wrap set to wrap , we can force individual elements to take 
+  up an entire line creating neat stacks of elements. */
+  flex-basis: 25rem;
+
+  /* We need to "Position: relative", So we can put another element 
+    div on top of it as "Position: absolute" */
+  position: relative;
+
+  .title h2 {
+    font-size: 5rem;
+  }
+}
+
+.profileImg {
+  position: relative;
+  /* If an element has flex: 1, it signifies that the width of all other 
+  elements will be the same as their content, 
+  but the element with flex: 1 will be given the remaining full space. */
+  flex: 1;
+  flex-basis: 25rem;
+  /* This below will hide the overflow image */
+  overflow: hidden;
+}
+
+.profileImg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.explore {
+  margin-top: 3rem;
+  align-self: flex-start;
+
+  .exploreCert {
+    color: white;
+  }
+}
