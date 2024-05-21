@@ -1,0 +1,10 @@
+@use "global";
+
+.ignite {
+  min-height: 100vh;
+  padding: 5rem 10rem;
+
+  h2 {
+    pointer-events: none;
+  }
+}
