@@ -1,12 +1,14 @@
-import React from "react";
-
+import React, { useEffect } from "react";
 import "../styles/allProjects.scss";
-// api doc
-// https://www.freetogame.com/api-doc
-// all games
-// https://www.freetogame.com/api/games
+import { useDispatch } from "react-redux";
+import { loadGames } from "../actions/gamesAction";
 
 const AllProjects = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadGames());
+  });
+
   return (
     <div className="games">
       <h2>All Projects will be added here...</h2>

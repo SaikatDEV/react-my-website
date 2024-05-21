@@ -9,7 +9,7 @@ import { configureStore, applyMiddleware, compose } from "@reduxjs/toolkit";
 import rootRouter from "./reducers";
 import rootReducer from "./reducers";
 // This below is a redux connection with the app
-import { provider } from "react-redux";
+import { Provider } from "react-redux";
 // THUNK
 import { thunk } from "redux-thunk";
 
@@ -17,7 +17,7 @@ import { thunk } from "redux-thunk";
 const devToolExt =
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 
-// We need this for thunk
+// We need this for thunk, So we can use applymiddleware for thunk
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 // create store, SO we can use devtool and combine reducer
@@ -31,11 +31,11 @@ const store = configureStore(
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <provider store={store}>
+    <Provider store={store}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </provider>
+    </Provider>
   </React.StrictMode>
 );
 
