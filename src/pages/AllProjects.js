@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { loadGames } from "../actions/gamesAction";
 
 const AllProjects = () => {
+  // We are doing dispaching loadGames() here for games data
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadGames());
