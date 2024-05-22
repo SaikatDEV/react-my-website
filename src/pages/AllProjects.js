@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { loadGames } from "../actions/gamesAction";
 // Components
 import Game from "../components/Game";
+import GameDetails from "../components/GameDetails";
 
 const AllProjects = () => {
   // We are doing dispaching loadGames() here for games data
@@ -16,7 +17,7 @@ const AllProjects = () => {
     dispatch(loadGames());
   }, [dispatch]);
 
-  // Pull the data from state using useSelector
+  // Pull the data from state using useSelector then we can do dipatch
   // const games = useSelector((state) => state.games);
   // console.log(games);
   // Deconstruct the games object as below:
@@ -25,6 +26,7 @@ const AllProjects = () => {
 
   return (
     <div className="games">
+      <GameDetails></GameDetails>
       <div className="current">
         <h2>Current Year Games:</h2>
         <div className="game">

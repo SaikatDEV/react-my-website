@@ -1,11 +1,7 @@
-import { type } from "@testing-library/user-event/dist/type";
-import { achievements_by_id } from "../api/gamesApi";
-
 const initState = {
   allGames: [],
   currentYearGames: [],
   futureYearGames: [],
-  achievementsById: [],
 };
 
 const gamesReducer = (state = initState, action) => {
@@ -17,7 +13,6 @@ const gamesReducer = (state = initState, action) => {
         allGames: action.payload.allGames,
         currentYearGames: action.payload.currentYearGames,
         futureYearGames: action.payload.futureYearGames,
-        achievementsById: action.payload.achievementsById,
       };
     case "CLEAR_GAMES":
       return {};

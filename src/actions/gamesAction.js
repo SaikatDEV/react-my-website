@@ -1,9 +1,8 @@
 import axios from "axios";
 import {
-  all_games,
-  current_year_games,
-  future_year_games,
-  achievements_by_id,
+  all_games_url,
+  current_year_games_url,
+  future_year_games_url,
 } from "../api/gamesApi";
 
 // Action Creator as we are using thunk. So we can use async
@@ -16,13 +15,11 @@ export const loadGames = () => async (dispatch) => {
     // console.log("API:" + all_free_games());
 
     // Fetch ALL Games data using AXIOS
-    const allGamesRes = await axios.get(all_games());
+    const allGamesRes = await axios.get(all_games_url());
     // Current year Games data using AXIOS
-    const currentYearGamesRes = await axios.get(current_year_games());
+    const currentYearGamesRes = await axios.get(current_year_games_url());
     // Future year Games data using AXIOS
-    const futureYearGamesRes = await axios.get(future_year_games());
-    // Achievements Games data using AXIOS
-    const achievementsByIdGamesRes = await axios.get(achievements_by_id(12));
+    const futureYearGamesRes = await axios.get(future_year_games_url());
 
     // Dispatch the action
     dispatch({
@@ -31,7 +28,6 @@ export const loadGames = () => async (dispatch) => {
         allGames: allGamesRes.data.results,
         currentYearGames: currentYearGamesRes.data.results,
         futureYearGames: futureYearGamesRes.data.results,
-        achievementsById: achievementsByIdGamesRes.data.results,
       },
     });
   } catch (error) {

@@ -1,8 +1,7 @@
-import { type } from "@testing-library/user-event/dist/type";
-import { game_detail_by_id } from "../api/gamesApi";
-
 const initState = {
-  gameDetails: [],
+  gameDetails: {},
+  screenshots: {},
+  achievements: {},
 };
 
 const gameDetailsReducer = (state = initState, action) => {
@@ -12,6 +11,8 @@ const gameDetailsReducer = (state = initState, action) => {
       return {
         ...state,
         gameDetails: action.payload.gameDetailsById,
+        screenshots: action.payload.screenshotsById,
+        achievements: action.payload.achievementsById,
       };
     default:
       return { ...state };
