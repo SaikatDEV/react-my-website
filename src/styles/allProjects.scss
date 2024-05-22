@@ -2,9 +2,18 @@
 
 .games {
   min-height: 100vh;
-  padding: 5rem 10rem;
+  padding: 1rem 5rem;
 
   h2 {
     pointer-events: none;
+    padding: 2rem 0rem;
+  }
+
+  .game {
+    min-height: 30vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
   }
 }
