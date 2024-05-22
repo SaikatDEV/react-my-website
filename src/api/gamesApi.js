@@ -1,10 +1,14 @@
 // const base_url = "https://rawg-video-games-database.p.rapidapi.com/";
 // const base_url = "https://www.freetogame.com/api/";
+// https://api.rawg.io/api/games/1/key=a77e904e38434e63ad0cce0d0ac43e1f
 const base_url = "https://api.rawg.io/api/";
 export const all_games = () =>
-  `${base_url}games?key=a77e904e38434e63ad0cce0d0ac43e1f&page_size=10`;
+  `${base_url}games?key=a77e904e38434e63ad0cce0d0ac43e1f&page_size=30`;
 export const achievements_by_id = (id) =>
   `${base_url}games/${id}/achievements?key=a77e904e38434e63ad0cce0d0ac43e1f`;
+export const game_detail_by_id = (id) =>
+  `${base_url}games/${id}?key=a77e904e38434e63ad0cce0d0ac43e1f`;
+//   https://api.rawg.io/api/games/2?key=a77e904e38434e63ad0cce0d0ac43e1f
 
 // Current day/month/Year
 const currentYear = new Date().getFullYear();
@@ -16,9 +20,9 @@ const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 // https://api.rawg.io/api/games?key=a77e904e38434e63ad0cce0d0ac43e1f&dates=2019-09-01,2019-09-30
 
 export const current_year_games = () =>
-  `${base_url}games?key=a77e904e38434e63ad0cce0d0ac43e1f&dates=${lastYear},${currentDate}`;
+  `${base_url}games?key=a77e904e38434e63ad0cce0d0ac43e1f&dates=${lastYear},${currentDate}&page_size=15`;
 export const future_year_games = () =>
-  `${base_url}games?key=a77e904e38434e63ad0cce0d0ac43e1f&dates=${currentDate},${nextYear}`;
+  `${base_url}games?key=a77e904e38434e63ad0cce0d0ac43e1f&dates=${currentDate},${nextYear}&page_size=15`;
 
 // Below API needed to be refactored
 export const games_by_platform = (platform) =>

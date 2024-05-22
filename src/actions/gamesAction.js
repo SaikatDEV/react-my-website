@@ -7,6 +7,7 @@ import {
 } from "../api/gamesApi";
 
 // Action Creator as we are using thunk. So we can use async
+// we need to export it, So we can use it in another file
 export const loadGames = () => async (dispatch) => {
   try {
     //   FETCH data using AXIOS
