@@ -7,35 +7,36 @@ const SampleProjects = () => {
     <div className="projects">
       <div className="sample">
         <div className="title">
-          <h2>All sample projects</h2>
+          <h2>
+            Sample projects <span>For Fun!</span>
+          </h2>
         </div>
         <div className="allGamesList">
-          <ul style={{ listStyleType: "square" }}>
+          <ul>
             <li>
               <Link to="/projects">
                 <b>
                   <u>All Popular Games:</u>
                 </b>
-                <p>
-                  (This will fetch the data from open source games API end
-                  point)
-                </p>
+                <p>(This will fetch games data from open source games API)</p>
               </Link>
             </li>
 
             <li>
-              <b>
-                <u>Search For any Images:</u>
-              </b>
-              <p>
-                (This will fetch the screenshots from open source API end point)
-              </p>
+              <Link to="/">
+                <b>
+                  <u>Search For any Images: (In progress...)</u>
+                </b>
+                <p>(This will fetch images from open source API)</p>
+              </Link>
             </li>
             <li>
-              <b>
-                <u>More:</u>
-              </b>
-              <p>(In Progress....)</p>
+              <Link to="/">
+                <b>
+                  <u>More:</u>
+                </b>
+                <p>(In Progress....)</p>
+              </Link>
             </li>
           </ul>
         </div>

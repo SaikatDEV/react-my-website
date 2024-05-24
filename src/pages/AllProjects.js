@@ -21,6 +21,8 @@ const AllProjects = () => {
   // If we dont use [dispatch] in useEffect, it will keep fetching
   const dispatch = useDispatch();
   useEffect(() => {
+    // This below will scroll to the top at the beginning
+    window.scrollTo(0, 0);
     dispatch(loadGames());
   }, [dispatch]);
 
