@@ -8,55 +8,59 @@ const SkillsSection = () => {
         <div className="title">
           <h2>Skills...</h2>
         </div>
-        <p>
+        <div className="skills">
           <ul>
             <li>
               <b>
-                <u>Languages</u>
+                <u>Languages:</u>
               </b>
-              : Java, Ruby, Groovy, SQL, PL-SQL, Shell Scripting, Python
+              <p>Java, Ruby, Groovy, SQL, PL-SQL, Shell Scripting, Python</p>
             </li>
             <li>
               <b>
-                <u>Framework Technologies</u>
+                <u>Framework Technologies:</u>
               </b>
-              : React, VueJS, TestNG, JUnit, Serenity, Cucumber, PlayWright,
-              Karate, Rest Assured, Jmeter, ANT, Maven, Jenkins, Bamboo, GitHUB,
-              Docker Container, Saucelabs etc
+              <p>
+                React, VueJS, TestNG, JUnit, Serenity, Cucumber, PlayWright,
+                Karate, Rest Assured, Jmeter, ANT, Maven, Jenkins, Bamboo,
+                GitHUB, Docker Container, Saucelabs etc
+              </p>
             </li>
             <li>
               <b>
-                <u>Scripting/Markup Languages</u>
+                <u>Scripting/Markup Languages:</u>
               </b>
-              : HTML, JSON, CSS, JAVASCRIPT, Node.js, ES6 etc
+              <p>HTML, JSON, CSS, JAVASCRIPT, Node.js, ES6 etc</p>
             </li>
             <li>
               <b>
-                <u>IDE’s/Tools</u>
+                <u>IDE’s/Tools:</u>
               </b>
-              : VScode, Eclipse 2.0/2.1/3.1, Spring Tool Suite, Rubymine,
-              Sublime etc
+              <p>
+                VScode, Eclipse 2.0/2.1/3.1, Spring Tool Suite, Rubymine,
+                Sublime etc
+              </p>
             </li>
             <li>
               <b>
-                <u>Testing Tools</u>
+                <u>Testing Tools:</u>
               </b>
-              : Selenium WebDriver, Playwright, Quality Center, QTP, RFT
+              <p>Selenium WebDriver, Playwright, Quality Center, QTP, RFT</p>
             </li>
             <li>
               <b>
-                <u>Defect Tracking Tools</u>
+                <u>Defect Tracking Tools:</u>
               </b>
-              : TRAC, JIRA, TFS, Rally
+              <p>TRAC, JIRA, TFS, Rally</p>
             </li>
             <li>
               <b>
-                <u>Databases</u>
+                <u>Databases:</u>
               </b>
-              : Oracle 10g/11gR2/12C, SQL Server, MongoDB etc
+              <p>Oracle 10g/11gR2/12C, SQL Server, MongoDB etc</p>
             </li>
           </ul>
-        </p>
+        </div>
       </div>
     </div>
   );

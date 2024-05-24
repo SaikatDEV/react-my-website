@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 // style
 import "../styles/allProjects.scss";
+// Import below to get the current location
+import { useLocation } from "react-router-dom";
 // Redux
 // useSelector will be used for retrieving the data from state
 import { useDispatch, useSelector } from "react-redux";
@@ -10,6 +12,11 @@ import Game from "../components/Game";
 import GameDetails from "../components/GameDetails";
 
 const AllProjects = () => {
+  // Get the current location path
+  const location = useLocation();
+  console.log(location.pathname);
+  const pathId = location.pathname.split("/")[2];
+
   // We are doing dispaching loadGames() here for games data
   // If we dont use [dispatch] in useEffect, it will keep fetching
   const dispatch = useDispatch();
@@ -26,7 +33,7 @@ const AllProjects = () => {
 
   return (
     <div className="games">
-      <GameDetails></GameDetails>
+      {pathId && <GameDetails></GameDetails>}
       <div className="current">
         <h2>Current Year Games:</h2>
         <div className="game">

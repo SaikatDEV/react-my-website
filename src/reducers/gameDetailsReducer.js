@@ -2,6 +2,8 @@ const initState = {
   gameDetails: {},
   screenshots: {},
   achievements: {},
+  // initial loading
+  isLoading: true,
 };
 
 const gameDetailsReducer = (state = initState, action) => {
@@ -13,6 +15,13 @@ const gameDetailsReducer = (state = initState, action) => {
         gameDetails: action.payload.gameDetailsById,
         screenshots: action.payload.screenshotsById,
         achievements: action.payload.achievementsById,
+        // When we finally fetch the data, loading is false
+        isLoading: false,
+      };
+    case "LOADING_DETAIL":
+      return {
+        ...state,
+        isLoading: true,
       };
     default:
       return { ...state };

@@ -18,35 +18,37 @@ const CertSection = () => {
             </Link>
           </div>
         </div>
-        <p>
+        <div className="certs">
           <ul>
             <li>
               <b>
-                <u>Microsoft Certified IT Professional(MCITP)</u>
+                <u>Microsoft Certified IT Professional(MCITP): </u>
               </b>
-              : on ms sql server 2008r2 - Achieved on: 2014
+              <p>On ms sql server 2008r2 - Achieved on: 2014</p>
             </li>
             <li>
               <b>
-                <u>Certified Scrum Master(CSM)</u>
+                <u>Certified Scrum Master(CSM): </u>
               </b>
-              : Cert ID 000445251 (Active through: 16 December 2025)
+              <p>Cert ID 000445251 (Active through: 16 December 2025)</p>
             </li>
             <li>
               <b>
-                <u>ICAgile Certified Professional(ICP)</u>
+                <u>ICAgile Certified Professional(ICP):</u>
               </b>
-              : Achieved on: 2015
+              <p>Achieved on: 2015</p>
             </li>
             <li>
               <b>
-                <u>Security +</u>
+                <u>Security +: </u>
               </b>
-              : CompTIA Verification Code: QK65S6YZCBF1Q03W (Active through: 29
-              January 2029)
+              <p>
+                CompTIA Verification Code: QK65S6YZCBF1Q03W (Active through: 29
+                January 2029)
+              </p>
             </li>
           </ul>
-        </p>
+        </div>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import AboutUs from "./pages/AboutUs";
 import NavBar from "./components/NavBar";
 import ContactUs from "./pages/ContactUs";
 import AllProjects from "./pages/AllProjects";
+import GameDetails from "./components/GameDetails";
 import Certifications from "./pages/ExploreCertifications";
 
 // Router
@@ -18,6 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/" exact element={<AboutUs />} />
         <Route path="/projects" exact element={<AllProjects />} />
+        <Route path="/projects/:id" exact element={<GameDetails />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/certifications" element={<Certifications />} />
       </Routes>
@@ -25,6 +27,7 @@ const App = () => {
   );
 };
 
+// <Route path="/projects" exact element={<AllProjects />} />
 // export as below,
 // So we can export the App() function to index.js or any other page
 export default App;

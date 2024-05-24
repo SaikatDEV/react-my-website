@@ -82,6 +82,15 @@
   }
 }
 
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; // or whatever height you need
+  font-size: 4rem; // or use an actual spinner component/style
+  color: #333;
+}
+
 // .gameDetail {
 //   min-height: 30vh;
 //   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);

@@ -1,0 +1,55 @@
+@use "global";
+
+.projects {
+  height: 30vh; // Set the desired height
+  overflow-y: auto; // Ensure content scrolls if it overflows the height
+  margin: 5rem 10rem 0rem 10rem;
+
+  .sample {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%; // Make sure the child takes the full height of the parent
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      // width: 100%; // Ensure it spans the full width
+
+      h2 {
+        font-size: 4rem;
+      }
+    }
+
+    .allGamesList ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+      li {
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        p {
+          margin-left: 1rem;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit; // This ensures the link color matches the parent color
+      }
+
+      a:hover {
+        // color: inherit; // Ensure the color doesn't change on hover
+        color: rgb(150, 228, 152);
+        opacity: 0.75;
+        transition: background-color 0.75s ease, color 0.75s ease;
+      }
+
+      u {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

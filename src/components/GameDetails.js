@@ -7,9 +7,13 @@ import { useSelector } from "react-redux";
 
 const GameDetails = () => {
   // Get the Data from state
-  const { gameDetails, screenshots, achievements } = useSelector(
+  const { gameDetails, screenshots, achievements, isLoading } = useSelector(
     (state) => state.gameDetails
   );
+
+  if (isLoading) {
+    return <div className="spinner">Loading...</div>;
+  }
 
   return (
     <div className="card-shadow">

@@ -2,15 +2,25 @@
 
 .skillsSection {
   margin: 5rem 10rem 5rem 10rem;
-  min-height: 20vh;
+  height: 55vh;
 
   .skillsDesc {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
+    .skills {
+      ul {
+        list-style-type: square;
+        padding-left: 1.5rem;
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+
     .title h2 {
-      font-size: 5rem;
+      font-size: 4rem;
     }
 
     u {
