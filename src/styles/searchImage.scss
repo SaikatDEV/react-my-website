@@ -1,0 +1,48 @@
+@use "global";
+
+.searchImage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 10rem;
+  text-align: center;
+
+  .search-bar {
+    height: 8vh;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .search-form {
+    margin-bottom: 1rem;
+    input {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      margin-left: 0.5rem;
+      font-size: 1rem;
+      border: none;
+    }
+  }
+
+  .more {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    border: none;
+  }
+}

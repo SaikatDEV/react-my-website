@@ -23,7 +23,7 @@ const SampleProjects = () => {
             </li>
 
             <li>
-              <Link to="/">
+              <Link to="/SearchImage">
                 <b>
                   <u>Search For any Images: (In progress...)</u>
                 </b>

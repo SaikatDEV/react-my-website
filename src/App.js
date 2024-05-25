@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar";
 import ContactUs from "./pages/ContactUs";
 import AllProjects from "./pages/AllProjects";
 import GameDetails from "./components/GameDetails";
+import SearchImage from "./pages/SearchImage";
 import Certifications from "./pages/ExploreCertifications";
 
 // Router
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/" exact element={<AboutUs />} />
         <Route path="/projects" exact element={<AllProjects />} />
         <Route path="/projects/:id" exact element={<GameDetails />} />
+        <Route path="/SearchImage" exact element={<SearchImage />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/certifications" element={<Certifications />} />
       </Routes>
