@@ -1,7 +1,7 @@
 @use "global";
 
 .projects {
-  height: 30vh; // Set the desired height
+  min-height: 30vh; // Set the desired height
   margin: 5rem 10rem 0rem 10rem;
 
   .sample {
