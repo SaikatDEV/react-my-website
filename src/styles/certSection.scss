@@ -1,9 +1,10 @@
 @use "global";
 
-.certSection {
-  margin-top: 3rem;
-  height: 40vh; // Set the desired height
+.certSection1 {
+  margin-top: 2rem;
+  min-height: 50vh; // Set the desired height
   // overflow-y: auto; // Ensure content scrolls if it overflows the height
+  padding: 2rem 10rem;
 
   .certDesc {
     display: flex;

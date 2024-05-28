@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CertSection = () => {
   return (
-    <div className="certSection">
+    <div className="certSection1">
       <div className="certDesc">
         <div className="title">
           <h2>Professional Certifications. </h2>
