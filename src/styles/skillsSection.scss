@@ -1,8 +1,8 @@
 @use "global";
 
 .skillsSection {
-  margin: 5rem 10rem 5rem 10rem;
-  height: 55vh;
+  margin: 3rem 10rem 0rem 10rem;
+  min-height: 50vh;
 
   .skillsDesc {
     display: flex;
