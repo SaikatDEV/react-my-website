@@ -14,7 +14,7 @@ import GameDetails from "../components/GameDetails";
 const AllProjects = () => {
   // Get the current location path
   const location = useLocation();
-  console.log(location.pathname);
+  // console.log(location.pathname);
   const pathId = location.pathname.split("/")[2];
 
   // We are doing dispaching loadGames() here for games data

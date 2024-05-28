@@ -1,38 +1,45 @@
 import React from "react";
-
+// Style
 import "../styles/contactUs.scss";
+// Images
+import github from "../img/github.svg";
+import stackoverflow from "../img/stack-overflow.svg";
+import email from "../img/email.svg";
+import linkedin from "../img/linkedin.svg";
 
 const ContactUs = () => {
   return (
     <div className="contact">
       <ul className="navLinks">
-        <h3>
+        <li data-tooltip="LinkedIn">
           <a
             href="https://www.linkedin.com/in/saikat-barua-mcitp-icp-csm/"
             target="_blank"
           >
-            LinkedIn
+            <img src={linkedin} alt="Linkedin" />
           </a>
-        </h3>
+        </li>
 
-        <h3>
+        <li data-tooltip="GitHub">
           <a href="https://github.com/SaikatDEV" target="_blank">
-            Github
+            <img src={github} alt="GitHub" />
           </a>
-        </h3>
-        <h3>
+        </li>
+
+        <li data-tooltip="Stackoverflow">
           <a
             href="https://stackoverflow.com/users/3434387/asm?tab=profile"
             target="_blank"
           >
-            StackOverflow
+            <img src={stackoverflow} alt="Stackoverflow" />
           </a>
-        </h3>
-        <h3>
+        </li>
+
+        <li data-tooltip="Email">
           <a href="mailto:devsaikat00@gmail.com" target="_blank">
-            Email
+            <img src={email} alt="Email" />
           </a>
-        </h3>
+        </li>
       </ul>
       <div className="touch">
         <h2>Stay in touch...</h2>

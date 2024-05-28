@@ -2,22 +2,56 @@
 
 .contact {
   min-height: 50vh;
-  padding: 5rem 10rem;
+  padding: 10rem 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   h2 {
     pointer-events: none;
-    margin-right: 20rem;
+    margin-right: 45rem;
   }
 }
 
 .navLinks {
-  h3 {
+  margin-left: 1rem;
+  position: relative;
+  li {
     font-size: 2.5rem;
     padding: 1rem 0rem;
     cursor: pointer;
+    list-style: none;
+
+    img {
+      width: 7rem;
+    }
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &::after {
+      /* Tooltip element (pseudo-element) */
+      content: attr(data-tooltip); /* Get tooltip text from data attribute */
+      // position: absolute;
+      // top: 10%; /* Position below the image */
+      // left: 30%;
+      transform: translateX(-50%); /* Center horizontally */
+      background-color: #0d0c0c;
+      padding: 5px;
+      border-radius: 3px;
+      font-size: 12px;
+      visibility: hidden; /* Initially hidden */
+      opacity: 0;
+      transition: visibility 0.2s, opacity 0.2s ease-in-out; /* Smooth transition */
+      color: white;
+    }
+
+    &:hover::after {
+      visibility: visible;
+      opacity: 1; /* Show tooltip on hover */
+      // color: white;
+    }
   }
 
   a {
@@ -25,10 +59,5 @@
     color: white;
     text-decoration: underline;
     transition: background-color 0.25s ease, color 0.25s ease;
-
-    &:hover {
-      color: rgb(150, 228, 152);
-      opacity: 0.75;
-    }
   }
 }

@@ -1,8 +1,9 @@
 @use "global";
 
 .certSection {
-  height: 30vh; // Set the desired height
-  overflow-y: auto; // Ensure content scrolls if it overflows the height
+  margin-top: 3rem;
+  height: 40vh; // Set the desired height
+  // overflow-y: auto; // Ensure content scrolls if it overflows the height
 
   .certDesc {
     display: flex;

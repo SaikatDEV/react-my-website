@@ -15,6 +15,7 @@ const SearchImage = () => {
   const [inputValue, setInputValue] = useState("");
   const [showMoreButton, setShowMoreButton] = useState(false);
   const [warningMsg, setWarningMsg] = useState(false);
+  const [warningMsg2, setWarningMsg2] = useState(false);
   const [errorResponse, setErrorResponse] = useState("");
   const [images, setimages] = useState([]);
 
@@ -58,16 +59,19 @@ const SearchImage = () => {
       // setInputValue("");
       setWarningMsg(false);
       setShowMoreButton(true);
-      console.log(response.data.photos.length);
+      setWarningMsg2(false);
+      console.log(response.data);
 
       // Check if images array is empty after fetching data
       if (response.data.photos.length < 1) {
         setWarningMsg(true); // Display warning message if no images are fetched
+        setShowMoreButton(false);
       }
     } catch (error) {
       setErrorResponse(error.message);
       setWarningMsg(true);
       clearGalleryImages();
+
       console.error("Error Fetching Data:", error);
     }
   };
@@ -75,10 +79,16 @@ const SearchImage = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     fetchImages();
+    setWarningMsg2(false);
   };
 
-  const handleClear = () => {
+  const handleClear = (e) => {
+    e.preventDefault();
+    setimages([]);
     setInputValue("");
+    setWarningMsg2(true);
+    setWarningMsg(false);
+    setShowMoreButton(false);
   };
 
   const clearGalleryImages = () => {
@@ -116,6 +126,11 @@ const SearchImage = () => {
           </form>
           {warningMsg && (
             <div className="warningMessage">Please try again!</div>
+          )}
+          {warningMsg2 && (
+            <div className="warningMessage">
+              Please enter data to search for any images!
+            </div>
           )}
         </div>
 

@@ -68,3 +68,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### WebSITE deploy to PROD > saikatbarua.com
+
+1. Go to: https://ap.www.namecheap.com/
+   https://ap.www.namecheap.com/ProductList/HostingSubscriptions
+2. Go to C-panel
+3. Go to package.json, And update as below:
+   "homepage": "https://saikatbarua.com/",
+4. Go to terminal> project> npm run build
+5. Go to the generated “build” folder > compressed
+6. Copy the zip file
+7. Go to C-panel > File manager > public_html > make the file empty
+8. Drag zip file to the public_html
+9. Extract the zip file > Makesure move all the files into the public_html folder
+10. Delete zip file
