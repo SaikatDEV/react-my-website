@@ -1,16 +1,17 @@
 @use "global";
 
 .certSection1 {
-  margin-top: 2rem;
-  min-height: 50vh; // Set the desired height
+  min-height: 70vh; // Set the desired height
   // overflow-y: auto; // Ensure content scrolls if it overflows the height
   padding: 2rem 10rem;
+  height: 100%;
+  position: relative;
+  margin-top: 5rem;
 
   .certDesc {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 100%;
   }
 
   .title {
@@ -20,10 +21,6 @@
 
     h2 {
       font-size: 4rem;
-    }
-
-    .exploreCert {
-      margin-left: 2rem;
     }
   }
 
@@ -37,5 +34,20 @@
 
   u {
     font-size: 1.5rem;
+  }
+
+  .background-overlay {
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

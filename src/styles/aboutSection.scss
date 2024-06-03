@@ -5,14 +5,16 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 70vh;
-  padding: 5rem 10rem;
-  margin-top: 10rem;
+  height: 90vh;
+  padding: 3rem 10rem;
+  margin-top: 7rem;
 }
 
 .desc {
   margin-left: 3rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   flex: 1;
   /* flex-basis has a higher priority than width or height (if set). 
@@ -25,6 +27,7 @@
   /* We need to "Position: relative", So we can put another element 
     div on top of it as "Position: absolute" */
   position: relative;
+  text-align: center;
 
   .title h2 {
     font-size: 5rem;
@@ -50,8 +53,7 @@
 }
 
 .explore {
-  margin-top: 3rem;
-  align-self: flex-start;
+  margin-top: 4rem;
 
   .exploreCert {
     color: white;

@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/skillsSection.scss";
+import skillBackground from "../img/skills-background.jpg";
 
 const SkillsSection = () => {
   return (
@@ -61,6 +62,9 @@ const SkillsSection = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="background-overlay">
+        <img src={skillBackground} alt="Background Image" />
       </div>
     </div>
   );

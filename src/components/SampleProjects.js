@@ -12,33 +12,28 @@ const SampleProjects = () => {
           </h2>
         </div>
         <div className="allGamesList">
-          <ul>
-            <li>
-              <Link to="/projects">
-                <b>
-                  <u>All Popular Games:</u>
-                </b>
-                <p>(This will fetch games data from open source games API)</p>
-              </Link>
-            </li>
+          <div className="lists">
+            <Link to="/projects">
+              <b>
+                <u>All Popular Games:</u>
+              </b>
+              <p>(This will fetch games data from open source games API)</p>
+            </Link>
 
-            <li>
-              <Link to="/searchImage">
-                <b>
-                  <u>Search For any Images: (In progress...)</u>
-                </b>
-                <p>(This will fetch images from open source API)</p>
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <b>
-                  <u>More:</u>
-                </b>
-                <p>(In Progress....)</p>
-              </Link>
-            </li>
-          </ul>
+            <Link to="/searchImage">
+              <b>
+                <u>Search For any Images:</u>
+              </b>
+              <p>(This will fetch images from open source API)</p>
+            </Link>
+
+            <Link to="/">
+              <b>
+                <u>More:</u>
+              </b>
+              <p>(In Progress....)</p>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

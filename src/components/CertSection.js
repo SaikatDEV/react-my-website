@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/certSection.scss";
 import { Link } from "react-router-dom";
+import background from "../img/prof-background.jpg";
 
 const CertSection = () => {
   return (
@@ -8,15 +9,6 @@ const CertSection = () => {
       <div className="certDesc">
         <div className="title">
           <h2>Professional Certifications. </h2>
-          <div className="explore">
-            <Link
-              to="/certifications"
-              href="https://docs.google.com/document/d/1CtdfXebvplwk0VU0mjf9Q3sI3qIhjWiD/edit"
-              className="exploreCert navButton"
-            >
-              Explore Certs
-            </Link>
-          </div>
         </div>
         <div className="certs">
           <ul>
@@ -48,7 +40,19 @@ const CertSection = () => {
               </p>
             </li>
           </ul>
+          <div className="explore">
+            <Link
+              to="/certifications"
+              href="https://docs.google.com/document/d/1CtdfXebvplwk0VU0mjf9Q3sI3qIhjWiD/edit"
+              className="exploreCert navButton"
+            >
+              Explore Certs
+            </Link>
+          </div>
         </div>
+      </div>
+      <div className="background-overlay">
+        <img src={background} alt="Background Image" />
       </div>
     </div>
   );
