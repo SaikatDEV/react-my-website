@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/sampleProjects.scss";
 import { Link } from "react-router-dom";
+import background from "../img/project-background.jpg";
 
 const SampleProjects = () => {
   return (
@@ -35,6 +36,9 @@ const SampleProjects = () => {
             </Link>
           </div>
         </div>
+      </div>
+      <div className="background-overlay">
+        <img src={background} alt="Background Image" />
       </div>
     </div>
   );

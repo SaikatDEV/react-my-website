@@ -1,19 +1,16 @@
 @use "global";
 
 .contact {
-  min-height: 50vh;
-  padding: 10rem 10rem;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  h2 {
-    pointer-events: none;
-    margin-right: 45rem;
-  }
+  background-image: url("../img/contact-background.jpg");
+  background-size: cover;
 }
 
 .navLinks {
+  padding: 10rem 10rem;
   position: relative;
   li {
     font-size: 2.5rem;

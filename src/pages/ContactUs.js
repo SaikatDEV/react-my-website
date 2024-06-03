@@ -42,7 +42,7 @@ const ContactUs = () => {
         </li>
       </ul>
       <div className="touch">
-        <h2>Stay in touch...</h2>
+        <h2></h2>
       </div>
     </div>
   );
