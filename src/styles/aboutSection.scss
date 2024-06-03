@@ -28,6 +28,7 @@
 }
 
 .desc {
+  cursor: default;
   margin-left: 3rem;
   display: flex;
   align-items: center;
@@ -47,7 +48,15 @@
   text-align: center;
 
   .title h2 {
+    cursor: default;
     font-size: 5rem;
+    text-shadow: 8px 8px 8px rgba(0, 0, 0, 1);
+    transition: background-color 0.75s ease, color 0.75s ease;
+
+    &:hover {
+      color: rgb(116, 123, 182);
+      transition: background-color 0.75s ease, color 0.75s ease;
+    }
   }
 }
 
@@ -67,7 +76,6 @@
 
 .explore {
   margin-top: 4rem;
-
   .exploreCert {
     color: white;
   }

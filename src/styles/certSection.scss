@@ -1,6 +1,7 @@
 @use "global";
 
 .certSection1 {
+  cursor: default;
   min-height: 70vh; // Set the desired height
   // overflow-y: auto; // Ensure content scrolls if it overflows the height
   padding: 2rem 10rem;
