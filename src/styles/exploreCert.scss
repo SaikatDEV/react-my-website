@@ -3,14 +3,39 @@
 .certSection {
   padding: 3rem 10rem;
   min-height: 100vh;
+
+  .detailSlide {
+    margin-top: 7rem;
+
+    h2 {
+      cursor: default;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 8px 8px 8px rgba(0, 0, 0, 1);
+      transition: background-color 0.75s ease, color 0.75s ease;
+
+      &:hover {
+        color: rgb(116, 123, 182);
+        transition: background-color 0.75s ease, color 0.75s ease;
+      }
+    }
+
+    .certImg {
+      margin-top: 2rem;
+      box-shadow: 5px 10px 15px rgba(0, 0, 0, 1);
+      border-radius: 3rem;
+      overflow: hidden;
+      width: 75%;
+      height: 75%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
 }
 
-.detailSlide {
-  margin-top: 4rem;
-}
-
-.certImg {
-  margin-top: 2rem;
-  width: 100%;
-  height: 100%;
+p {
+  font-size: 1.5rem;
 }

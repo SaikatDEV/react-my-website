@@ -2,14 +2,14 @@
 
 .certSection1 {
   cursor: default;
-  min-height: 70vh; // Set the desired height
+  min-height: 90vh; // Set the desired height
   // overflow-y: auto; // Ensure content scrolls if it overflows the height
   padding: 2rem 10rem;
   height: 100%;
   position: relative;
 
   .certDesc {
-    margin-top: 5rem;
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -22,6 +22,14 @@
 
     h2 {
       font-size: 4rem;
+      margin-bottom: 2rem;
+      text-shadow: 8px 8px 8px rgba(0, 0, 0, 1);
+      transition: background-color 0.75s ease, color 0.75s ease;
+
+      &:hover {
+        color: rgb(116, 123, 182);
+        transition: background-color 0.75s ease, color 0.75s ease;
+      }
     }
   }
 

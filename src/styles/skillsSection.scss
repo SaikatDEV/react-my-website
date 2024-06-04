@@ -24,6 +24,14 @@
 
     .title h2 {
       font-size: 4rem;
+      margin-bottom: 2rem;
+      text-shadow: 8px 8px 8px rgba(0, 0, 0, 1);
+      transition: background-color 0.75s ease, color 0.75s ease;
+
+      &:hover {
+        color: rgb(116, 123, 182);
+        transition: background-color 0.75s ease, color 0.75s ease;
+      }
     }
 
     u {
