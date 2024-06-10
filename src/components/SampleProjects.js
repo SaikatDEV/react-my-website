@@ -18,21 +18,43 @@ const SampleProjects = () => {
               <b>
                 <u>All Popular Games:</u>
               </b>
-              <p>(This will fetch games data from open source games API)</p>
+              <p className="text-lg">
+                (This will fetch games data from open source games API. Used:
+                Axios, Redux, Jsx, JS, Scss)
+              </p>
             </Link>
 
             <Link to="/searchImage">
               <b>
                 <u>Search For any Images:</u>
               </b>
-              <p>(This will fetch images from open source API)</p>
+              <p className="text-lg">
+                (This will fetch images from open source API. Used: Axios,
+                UseState, Jsx, Scss, Js)
+              </p>
+            </Link>
+
+            <Link to="/materialUI">
+              <b>
+                <u>Material UI Project</u>
+              </b>
+              <p className="text-lg">
+                (Used: MaterialUI, Jsx, Js, TailwindCss)
+              </p>
+            </Link>
+
+            <Link to="/tailwind">
+              <b>
+                <u>TailwindCSS Project</u>
+              </b>
+              <p className="text-lg">(Used: Jsx, TailwindCss, Js)</p>
             </Link>
 
             <Link to="/">
               <b>
                 <u>More:</u>
               </b>
-              <p>(In Progress....)</p>
+              <p className="text-lg">(In Progress....)</p>
             </Link>
           </div>
         </div>

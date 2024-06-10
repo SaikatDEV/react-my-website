@@ -8,6 +8,9 @@ const AboutSection = () => {
   return (
     <div className="aboutProfile">
       <div className="container">
+        <div className="background-overlay">
+          <img src={background} alt="Background Image" />
+        </div>
         <div className="profileImg">
           <img src={image} alt="Saikat profile photo" />
           <div className="reveal-img"></div>
@@ -17,7 +20,7 @@ const AboutSection = () => {
           <div className="title">
             <h2>About me...</h2>
           </div>
-          <p>
+          <p className="text-lg">
             <span>
               I am a Technology-minded individual with a passion for Front End
               Web Development using REACT, VueJS, HTML, CSS, Javascript etc.
@@ -39,9 +42,6 @@ const AboutSection = () => {
           >
             Resume
           </a>
-        </div>
-        <div className="background-overlay">
-          <img src={background} alt="Background Image" />
         </div>
       </div>
     </div>

@@ -1,7 +1,8 @@
 @use "global";
 
 .contact {
-  min-height: 100vh;
+  min-height: 90vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,7 +12,8 @@
 }
 
 .navLinks {
-  padding: 10rem 10rem;
+  margin-top: 7rem;
+  padding: 0rem 10rem;
   position: relative;
   li {
     font-size: 2.5rem;
@@ -31,8 +33,8 @@
       /* Tooltip element (pseudo-element) */
       content: attr(data-tooltip); /* Get tooltip text from data attribute */
       // position: absolute;
-      // top: 10%; /* Position below the image */
-      // left: 30%;
+      // top: 5%; /* Position below the image */
+      // left: 50%;
       transform: translateX(-50%); /* Center horizontally */
       background-color: #0d0c0c;
       padding: 5px;
