@@ -1,0 +1,39 @@
+{
+  "skills": [
+    {
+      "title": "Languages:",
+      "details": "Java, Ruby, Groovy, SQL, PL-SQL, Shell Scripting, Python",
+      "id": 1
+    },
+    {
+      "title": "Framework Technologies:",
+      "details": "React, VueJS, TestNG, JUnit, Serenity, Cucumber, PlayWright, Karate, Rest Assured, Jmeter, ANT, Maven, Jenkins, Bamboo, GitHUB, Docker Container, Saucelabs etc",
+      "id": 2
+    },
+    {
+      "title": "Scripting/Markup Languages:",
+      "details": "HTML, JSON, CSS, JAVASCRIPT, Node.js, ES6 etc",
+      "id": 3
+    },
+    {
+      "title": "IDE’s/Tools:",
+      "details": "Selenium WebDriver, Playwright, Quality Center, QTP, RFT",
+      "id": 4
+    },
+    {
+      "title": "Testing Tools:",
+      "details": "Java, Ruby, Groovy, SQL, PL-SQL, Shell Scripting, Python",
+      "id": 5
+    },
+    {
+      "title": "Defect Tracking Tools:",
+      "details": "Trac, Jira, TFS, Rally",
+      "id": 6
+    },
+    {
+      "title": "Databases:",
+      "details": "Oracle 10g/11gR2/12C, SQL Server, MongoDB etc",
+      "id": 7
+    }
+  ]
+}

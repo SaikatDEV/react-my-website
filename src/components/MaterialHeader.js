@@ -1,9 +1,31 @@
+import React, { useEffect, useState } from "react";
+// Material UI
 import { AppBar, Divider, IconButton, Toolbar } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
 
+import axios from "axios";
+
 const MaterialHeader = () => {
+  // state
+  const [skills, setSkills] = useState([]);
+
+  useEffect(() => {
+    // Get the current base url, We cant use this below as API URL is diff
+    const appBaseUrl = window.location.origin;
+    console.log("BASEURL: ", appBaseUrl);
+
+    axios
+      .get("http://localhost:8000/skills")
+      .then((response) => {
+        setSkills(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching skills data:", error);
+      });
+  }, []);
+
   return (
     <>
       <AppBar position="static">
@@ -24,6 +46,12 @@ const MaterialHeader = () => {
         <SendRoundedIcon className="mr-2 scale-75" />
         Submit
       </button>
+
+      <div>
+        {skills.map((each) => (
+          <p>{each.title}</p>
+        ))}
+      </div>
     </>
   );
 };
