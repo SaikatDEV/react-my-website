@@ -1,14 +1,13 @@
 import React from "react";
 import MaterialHeader from "../components/MaterialHeader";
-
-// MaterialUI
-import { Container } from "@mui/material";
+import MaterialBody from "../components/MaterialBody";
 
 const MaterialUI = () => {
   return (
-    <Container className="mt-32">
+    <div className="mt-32">
       <MaterialHeader />
-    </Container>
+      <MaterialBody />
+    </div>
   );
 };
 

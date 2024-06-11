@@ -69,10 +69,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-### Install Jason server if your data is in the .json file and use JASON SERVER to mimic the env
+### (optional) Install Jason server if your data is in the .json file and use JASON SERVER to mimic the env
 
-npm install -g json-server
-json-server --watch data/skillsData.json --port 8000
+`npm install -g json-server`
+`json-server --watch data/skillsData.json --port 8000`
+
+### For Date, we can use below lib
+
+`npm install date-fns` We can import as `import {format} from 'date-fns'`
+
+### We need to use REACT masonry CSS to layout the MUI grid system
+
+`npm i react-masonry-css` We can import as `import Masonry from 'react-masonry-css'`
 
 ### WebSITE deploy to PROD > saikatbarua.com
 

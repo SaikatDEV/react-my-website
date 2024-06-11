@@ -3,36 +3,43 @@
     {
       "title": "Languages:",
       "details": "Java, Ruby, Groovy, SQL, PL-SQL, Shell Scripting, Python",
+      "thumbnail": "https://miro.medium.com/v2/resize:fit:762/1*L5QyrMNalM3yhtgdgBcvkQ.png",
       "id": 1
     },
     {
       "title": "Framework Technologies:",
       "details": "React, VueJS, TestNG, JUnit, Serenity, Cucumber, PlayWright, Karate, Rest Assured, Jmeter, ANT, Maven, Jenkins, Bamboo, GitHUB, Docker Container, Saucelabs etc",
+      "thumbnail": "https://cdn-blog.scalablepath.com/uploads/2021/08/dot-net-intro-744x400-1.png",
       "id": 2
     },
     {
       "title": "Scripting/Markup Languages:",
       "details": "HTML, JSON, CSS, JAVASCRIPT, Node.js, ES6 etc",
+      "thumbnail": "https://docs.unity3d.com/uploads/Main/ScriptingIntroPic.jpg",
       "id": 3
     },
     {
-      "title": "IDE’s/Tools:",
+      "title": "IDE/Tools:",
       "details": "Selenium WebDriver, Playwright, Quality Center, QTP, RFT",
+      "thumbnail": "https://assets.codegrip.tech/wp-content/uploads/2022/03/11154314/Blog-Feature-image-1200x628-1.png",
       "id": 4
     },
     {
       "title": "Testing Tools:",
       "details": "Java, Ruby, Groovy, SQL, PL-SQL, Shell Scripting, Python",
+      "thumbnail": "https://www.getsoftwareservice.com/wp-content/uploads/2015/05/Testing-Tools.jpg",
       "id": 5
     },
     {
       "title": "Defect Tracking Tools:",
       "details": "Trac, Jira, TFS, Rally",
+      "thumbnail": "https://static.javatpoint.com/tutorial/software-testing/images/defect-bug-tracking-tool.png",
       "id": 6
     },
     {
       "title": "Databases:",
       "details": "Oracle 10g/11gR2/12C, SQL Server, MongoDB etc",
+      "thumbnail": "https://www.baculasystems.com/wp-content/uploads/2020/04/Databases-diagram_new.png",
       "id": 7
     }
   ]
