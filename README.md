@@ -82,6 +82,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 `npm i react-masonry-css` We can import as `import Masonry from 'react-masonry-css'`
 
+### Material React table
+
+`npm install material-react-table`
+
 ### WebSITE deploy to PROD > saikatbarua.com
 
 1. Go to: https://ap.www.namecheap.com/

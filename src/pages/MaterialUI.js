@@ -1,12 +1,15 @@
 import React from "react";
 import MaterialHeader from "../components/MaterialHeader";
-import MaterialBody from "../components/MaterialBody";
+import MaterialTableUI from "../components/MaterialTableUI";
+import MaterialTileUI from "../components/MaterialTileUI";
 
 const MaterialUI = () => {
   return (
     <div className="mt-32">
       <MaterialHeader />
-      <MaterialBody />
+      <MaterialTableUI />
+      <MaterialTileUI />
+      {/*<MaterialBody />*/}
     </div>
   );
 };
