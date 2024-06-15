@@ -78,4 +78,41 @@
       padding-left: 0;
     }
   }
+
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+    padding: 1rem 2rem;
+
+    .asmLogo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .asmLogo img {
+      height: 3rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    ul {
+      padding: 0;
+
+      li {
+        padding-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    li {
+      font-size: 0.9rem;
+      padding-left: 0;
+    }
+  }
 }
