@@ -10,6 +10,7 @@ import {
   TextField,
   IconButton,
   Button,
+  Typography,
 } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import SaveIcon from "@mui/icons-material/Save";
@@ -18,10 +19,10 @@ import DeleteIcon from "@mui/icons-material/Delete";
 
 const MyPlanner = () => {
   const [plannerData, setPlannerData] = useState({});
-  const [showText, setShowText] = useState(false);
-  const [showUnderline, setShowUnderline] = useState(false);
   const [editMode, setEditMode] = useState(null); // Track which location is in edit mode
   const [updatedData, setUpdatedData] = useState(null); // Track updated data
+  const [newTripTitle, setNewTripTitle] = useState(""); // State to capture new trip title
+  const [editTitle, setEditTitle] = useState({}); // State to track which trip title is being edited
 
   useEffect(() => {
     fetch("/data/plannerData.json") // Adjust the path to your JSON file
@@ -36,14 +37,6 @@ const MyPlanner = () => {
           throw new Error("Data fetched is not an object");
         }
         setPlannerData(data);
-      })
-      .then(() => {
-        // Data fetched successfully, show text and underline
-        setShowText(true);
-        const underlineTimeout = setTimeout(() => {
-          setShowUnderline(true);
-        }, 1000); // Adjust this delay to match the total animation duration of the text
-        return () => clearTimeout(underlineTimeout);
       })
       .catch((error) => {
         console.error("Error fetching or processing planner data:", error);
@@ -133,7 +126,7 @@ const MyPlanner = () => {
   const handleAddTrip = () => {
     const newTripKey = `trip${Object.keys(plannerData).length + 1}`;
     const newTripData = {
-      id: String(Object.keys(plannerData).length + 1),
+      id: newTripTitle || `Trip ${Object.keys(plannerData).length + 1}`, // Use provided title or generate a default title
       locations: [],
     };
 
@@ -143,38 +136,53 @@ const MyPlanner = () => {
     };
 
     setPlannerData(updatedTripData);
+    setNewTripTitle(""); // Reset new trip title input after adding
   };
 
-  const renderAnimatedText = (text) => {
-    return (
-      <span className="inline-block overflow-hidden">
-        {text.split("").map((char, index) => (
-          <span
-            key={index}
-            className={`inline-block transform transition-transform duration-500 ${
-              showText
-                ? "translate-y-0 opacity-100"
-                : "translate-y-full opacity-0"
-            }`}
-            style={{ transitionDelay: `${index * 100}ms` }}
-          >
-            {char}
-          </span>
-        ))}
-      </span>
-    );
+  const handleDeleteTrip = (tripKey) => {
+    const updatedPlannerData = { ...plannerData };
+    delete updatedPlannerData[tripKey];
+
+    setPlannerData(updatedPlannerData);
+
+    // Here you can implement logic to delete data from your backend or storage
+    // Example: fetch('/api/deleteTrip', { method: 'DELETE', body: JSON.stringify({ tripKey }) })
+    // .then(response => response.json())
+    // .then(data => console.log('Deleted trip:', data))
+    // .catch(error => console.error('Error deleting trip:', error));
+  };
+
+  const handleEditTripTitle = (tripKey, newTitle) => {
+    const updatedTripData = {
+      ...plannerData,
+      [tripKey]: {
+        ...plannerData[tripKey],
+        id: newTitle,
+      },
+    };
+
+    setPlannerData(updatedTripData);
+
+    // Here you can implement logic to save updated trip title to your backend or storage
+    // Example: fetch('/api/updateTripTitle', { method: 'PUT', body: JSON.stringify({ tripKey, newTitle }) })
+    // .then(response => response.json())
+    // .then(data => console.log('Updated trip title:', data))
+    // .catch(error => console.error('Error updating trip title:', error));
+  };
+
+  const handleTitleClick = (tripKey) => {
+    setEditTitle((prevState) => ({ ...prevState, [tripKey]: true }));
+  };
+
+  const handleTitleBlur = (tripKey, newTitle) => {
+    handleEditTripTitle(tripKey, newTitle);
+    setEditTitle((prevState) => ({ ...prevState, [tripKey]: false }));
   };
 
   return (
     <div className="mx-44 mt-36">
       <h1 className="text-4xl font-bold mb-4 flex relative inline-block">
-        {renderAnimatedText("Trip-Itinerary")}
-        <span
-          className={`absolute left-0 bottom-0 w-full h-1 bg-green-500 transform transition-transform duration-500 ${
-            showUnderline ? "scale-x-100" : "scale-x-0"
-          }`}
-          style={{ transformOrigin: "left center", transitionDelay: ".5s" }} // Adjust this delay to match the total animation duration of the text
-        ></span>
+        Trip-Itinerary
       </h1>
       <div className="tripInfo">
         <h3>
@@ -185,12 +193,20 @@ const MyPlanner = () => {
         </h3>
       </div>
       <div>
+        <TextField
+          fullWidth
+          label="Trip Title"
+          value={newTripTitle}
+          onChange={(e) => setNewTripTitle(e.target.value)}
+          style={{ marginBottom: "1rem" }}
+        />
         <Button
           variant="contained"
           color="primary"
           startIcon={<AddIcon />}
           onClick={handleAddTrip}
-          style={{ marginBottom: "1rem" }}
+          style={{ marginBottom: "1rem", marginLeft: "1rem" }}
+          disabled={!newTripTitle}
         >
           Add Trip
         </Button>
@@ -200,9 +216,16 @@ const MyPlanner = () => {
               <TableHead>
                 <TableRow>
                   <TableCell colSpan={3} align="center">
-                    <h2 className="text-xl font-semibold mb-2">
-                      {plannerData[tripKey].id}
-                    </h2>
+                    <TextField
+                      fullWidth
+                      defaultValue={plannerData[tripKey].id}
+                      onBlur={(e) =>
+                        handleEditTripTitle(tripKey, e.target.value)
+                      }
+                    />
+                    <IconButton onClick={() => handleDeleteTrip(tripKey)}>
+                      <DeleteIcon />
+                    </IconButton>
                   </TableCell>
                 </TableRow>
                 <TableRow>
