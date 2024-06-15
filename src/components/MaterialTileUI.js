@@ -69,42 +69,6 @@ function MaterialTileUI() {
       fee: 458796,
     },
     {
-      name: "Sweety",
-      email: "sweety@gmail.com",
-      phone: 741852912,
-      age: 17,
-      gender: "F",
-      city: "Noida",
-      fee: 458796,
-    },
-    {
-      name: "Sweety",
-      email: "sweety@gmail.com",
-      phone: 741852912,
-      age: 17,
-      gender: "F",
-      city: "Noida",
-      fee: 458796,
-    },
-    {
-      name: "Sweety",
-      email: "sweety@gmail.com",
-      phone: 741852912,
-      age: 17,
-      gender: "F",
-      city: "Noida",
-      fee: 458796,
-    },
-    {
-      name: "Sweety",
-      email: "sweety@gmail.com",
-      phone: 741852912,
-      age: 17,
-      gender: "F",
-      city: "Noida",
-      fee: 458796,
-    },
-    {
       name: "Vikas",
       email: "vikas@gmail.com",
       phone: 9876543210,
@@ -130,13 +94,13 @@ function MaterialTileUI() {
   );
 
   return (
-    <div className="App">
-      <h1 align="center">Material Tile</h1>
-      <div className="flex flex-wrap justify-center">
+    <div className="App bg-offwhite text-black">
+      <h1 className="text-center">Material Tile</h1>
+      <div className="flex flex-wrap justify-center px-10 sm:px-4 md:px-6 lg:px-20 xl:px-40">
         {paginatedData.map((row, index) => (
           <Card
             key={index}
-            className="w-72 m-2"
+            className="w-72 m-2 border border-gray-300"
             ref={(el) => (cardRefs.current[index] = el)}
           >
             <CardContent>

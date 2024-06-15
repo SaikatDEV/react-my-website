@@ -14,7 +14,8 @@ const SampleProjects = () => {
         </div>
         <div className="allGamesList">
           <div className="lists">
-            <Link to="/projects">
+            {/* 
+   <Link to="/projects">
               <b>
                 <u>All Popular Games:</u>
               </b>
@@ -23,6 +24,7 @@ const SampleProjects = () => {
                 Axios, Redux, Scss)
               </p>
             </Link>
+                */}
 
             <Link to="/searchImage">
               <b>

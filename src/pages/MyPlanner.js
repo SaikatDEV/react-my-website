@@ -16,6 +16,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import SaveIcon from "@mui/icons-material/Save";
 import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
+import PrintIcon from "@mui/icons-material/Print";
 
 const MyPlanner = () => {
   const [plannerData, setPlannerData] = useState({});
@@ -179,178 +180,189 @@ const MyPlanner = () => {
     setEditTitle((prevState) => ({ ...prevState, [tripKey]: false }));
   };
 
+  const handlePrint = () => {
+    window.print();
+  };
+
   return (
     <div
-      className="mx-44 mt-36 bg-cover bg-center text-black"
+      className="mx-6 mt-24 lg:mx-20 xl:mx-44 xl:mt-36 bg-cover bg-center text-black sm:mt-40"
       style={{
         backgroundColor: "#dfdfdf",
         padding: "20px",
         borderRadius: "8px",
       }}
     >
-      <div className="bg-white bg-opacity-80 p-8 rounded-lg">
-        <h1 className="text-4xl font-bold mb-4 flex relative inline-block">
+      <div className="bg-white bg-opacity-80 p-4 lg:p-8 rounded-lg">
+        <h1 className="text-2xl lg:text-4xl font-bold mb-4 relative">
           Trip-Itinerary
         </h1>
-        <div className="tripInfo">
-          <h3>
+        <Button
+          variant="contained"
+          color="secondary"
+          startIcon={<PrintIcon />}
+          onClick={handlePrint}
+          className="mb-4"
+        >
+          Print
+        </Button>
+        <div className="tripInfo mb-4">
+          <h3 className="text-lg lg:text-xl">
             Departure Date: <span>July 24th</span>
           </h3>
-          <h3>
+          <h3 className="text-lg lg:text-xl">
             Arrival Date: <span>July 30th</span>
           </h3>
         </div>
-        <div>
+        <div className="mb-4">
           <TextField
             fullWidth
             label="Trip Title"
             value={newTripTitle}
             onChange={(e) => setNewTripTitle(e.target.value)}
-            style={{ marginBottom: "1rem" }}
+            className="mb-4"
           />
           <Button
             variant="contained"
             color="primary"
             startIcon={<AddIcon />}
             onClick={handleAddTrip}
-            style={{ marginBottom: "1rem", marginLeft: "1rem" }}
             disabled={!newTripTitle}
           >
             Add Trip
           </Button>
-          {Object.keys(plannerData).map((tripKey) => (
-            <TableContainer component={Paper} key={tripKey} className="mb-6">
-              <Table>
-                <TableHead>
-                  <TableRow>
-                    <TableCell colSpan={3} align="center">
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          alignItems: "center",
-                        }}
-                      >
-                        {editTitle[tripKey] ? (
-                          <TextField
-                            fullWidth
-                            defaultValue={plannerData[tripKey].id}
-                            onBlur={(e) =>
-                              handleTitleBlur(tripKey, e.target.value)
-                            }
-                            autoFocus
-                          />
-                        ) : (
-                          <Typography
-                            variant="h6"
-                            component="h2"
-                            onClick={() => handleTitleClick(tripKey)}
-                            style={{ cursor: "pointer" }}
-                          >
-                            {plannerData[tripKey].id}
-                          </Typography>
-                        )}
-                        <IconButton onClick={() => handleDeleteTrip(tripKey)}>
-                          <DeleteIcon />
-                        </IconButton>
-                      </div>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Location</TableCell>
-                    <TableCell>Time</TableCell>
-                    <TableCell></TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {plannerData[tripKey].locations.map((location, index) => (
-                    <TableRow key={index}>
-                      <TableCell>
-                        {editMode &&
-                        editMode.tripKey === tripKey &&
-                        editMode.locationIndex === index ? (
-                          <TextField
-                            fullWidth
-                            name="name"
-                            value={updatedData?.name || location.name}
-                            onChange={handleInputChange}
-                          />
-                        ) : (
-                          location.name
-                        )}
-                      </TableCell>
-                      <TableCell>
-                        {editMode &&
-                        editMode.tripKey === tripKey &&
-                        editMode.locationIndex === index ? (
-                          <TextField
-                            fullWidth
-                            name="time"
-                            value={updatedData?.time || location.time}
-                            onChange={handleInputChange}
-                          />
-                        ) : (
-                          location.time
-                        )}
-                      </TableCell>
-                      <TableCell>
-                        {editMode &&
-                        editMode.tripKey === tripKey &&
-                        editMode.locationIndex === index ? (
-                          <IconButton onClick={handleSave}>
-                            <SaveIcon />
-                          </IconButton>
-                        ) : (
-                          <IconButton
-                            onClick={() => handleEdit(tripKey, index)}
-                          >
-                            <EditIcon />
-                          </IconButton>
-                        )}
-                        <IconButton
-                          onClick={() => handleDeleteRow(tripKey, index)}
-                        >
-                          <DeleteIcon />
-                        </IconButton>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                  <TableRow>
-                    <TableCell>
-                      <TextField
-                        fullWidth
-                        placeholder="New Location"
-                        value={updatedData?.name || ""}
-                        onChange={handleInputChange}
-                        name="name"
-                      />
-                    </TableCell>
-                    <TableCell>
-                      <TextField
-                        fullWidth
-                        placeholder="Time"
-                        value={updatedData?.time || ""}
-                        onChange={handleInputChange}
-                        name="time"
-                      />
-                    </TableCell>
-                    <TableCell>
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        startIcon={<AddIcon />}
-                        onClick={() => handleAddRow(tripKey)}
-                      >
-                        Add
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </TableContainer>
-          ))}
         </div>
+        {Object.keys(plannerData).map((tripKey) => (
+          <TableContainer component={Paper} key={tripKey} className="mb-6">
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell colSpan={3} align="center">
+                    <div className="flex justify-between items-center">
+                      {editTitle[tripKey] ? (
+                        <TextField
+                          fullWidth
+                          defaultValue={plannerData[tripKey].id}
+                          onBlur={(e) =>
+                            handleTitleBlur(tripKey, e.target.value)
+                          }
+                          autoFocus
+                        />
+                      ) : (
+                        <Typography
+                          variant="h6"
+                          component="h2"
+                          onClick={() => handleTitleClick(tripKey)}
+                          className="cursor-pointer"
+                        >
+                          {plannerData[tripKey].id}
+                        </Typography>
+                      )}
+                      <IconButton onClick={() => handleDeleteTrip(tripKey)}>
+                        <DeleteIcon />
+                      </IconButton>
+                    </div>
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Location</TableCell>
+                  <TableCell>Time</TableCell>
+                  <TableCell></TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {plannerData[tripKey].locations.map((location, index) => (
+                  <TableRow key={index}>
+                    <TableCell>
+                      {editMode &&
+                      editMode.tripKey === tripKey &&
+                      editMode.locationIndex === index ? (
+                        <TextField
+                          fullWidth
+                          name="name"
+                          value={updatedData?.name || location.name}
+                          onChange={handleInputChange}
+                        />
+                      ) : (
+                        location.name
+                      )}
+                    </TableCell>
+                    <TableCell>
+                      {editMode &&
+                      editMode.tripKey === tripKey &&
+                      editMode.locationIndex === index ? (
+                        <TextField
+                          fullWidth
+                          name="time"
+                          value={updatedData?.time || location.time}
+                          onChange={handleInputChange}
+                        />
+                      ) : (
+                        location.time
+                      )}
+                    </TableCell>
+                    <TableCell>
+                      {editMode &&
+                      editMode.tripKey === tripKey &&
+                      editMode.locationIndex === index ? (
+                        <IconButton onClick={handleSave}>
+                          <SaveIcon />
+                        </IconButton>
+                      ) : (
+                        <IconButton onClick={() => handleEdit(tripKey, index)}>
+                          <EditIcon />
+                        </IconButton>
+                      )}
+                      <IconButton
+                        onClick={() => handleDeleteRow(tripKey, index)}
+                      >
+                        <DeleteIcon />
+                      </IconButton>
+                    </TableCell>
+                  </TableRow>
+                ))}
+                <TableRow>
+                  <TableCell>
+                    <TextField
+                      fullWidth
+                      placeholder="New Location"
+                      value={updatedData?.name || ""}
+                      onChange={handleInputChange}
+                      name="name"
+                    />
+                  </TableCell>
+                  <TableCell>
+                    <TextField
+                      fullWidth
+                      placeholder="Time"
+                      value={updatedData?.time || ""}
+                      onChange={handleInputChange}
+                      name="time"
+                    />
+                  </TableCell>
+                  <TableCell>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      startIcon={<AddIcon />}
+                      onClick={() => handleAddRow(tripKey)}
+                    >
+                      Add
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </TableContainer>
+        ))}
       </div>
+      <style jsx>{`
+        @media (max-width: 480px) {
+          .mx-6 {
+            margin-top: 16rem;
+          }
+        }
+      `}</style>
     </div>
   );
 };

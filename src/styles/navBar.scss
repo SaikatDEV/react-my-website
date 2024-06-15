@@ -10,37 +10,72 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
+
   .asmLogo {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   h2 {
     margin-left: 2rem;
     font-size: 2.5rem;
-    /* padding: 2rem; */
   }
+
   .asmLogo img {
     height: 4rem;
-    /* object-fit: cover; */
   }
+
   a {
     color: white;
     text-decoration: none;
   }
+
   ul {
     display: flex;
     list-style: none;
   }
+
   #logo {
     padding-left: 1rem;
     font-family: "Lobster", cursive;
     font-weight: lighter;
   }
+
   li {
     font-size: 1.2rem;
     padding-left: 6rem;
-    /* As we will be doing some animation here */
     position: relative;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+
+    .asmLogo {
+      flex-direction: column;
+      align-items: flex-start;
+      h2 {
+        margin-left: 0;
+        font-size: 2rem;
+      }
+    }
+
+    ul {
+      flex-direction: column;
+      width: 100%;
+      padding: 1rem 0;
+
+      li {
+        padding-left: 0;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+      }
+    }
+
+    li {
+      padding-left: 0;
+    }
   }
 }

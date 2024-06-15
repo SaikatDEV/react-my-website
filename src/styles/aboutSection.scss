@@ -13,15 +13,49 @@
     justify-content: center;
     min-height: 90vh;
     min-width: 100vw;
+
     .background-overlay {
       opacity: 0.3;
       position: absolute;
       top: 0;
       z-index: -1;
+
       img {
         height: 100%;
         width: 100%;
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0rem 2rem;
+      flex-direction: column;
+      min-height: 100vh;
+      min-width: 100vw;
+    }
+
+    .desc {
+      margin-left: 0;
+      text-align: center;
+
+      .title h2 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .explore {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .profileImg {
+      display: none;
     }
   }
 }
@@ -34,15 +68,7 @@
   justify-content: center;
   flex-direction: column;
   flex: 1;
-  /* flex-basis has a higher priority than width or height (if set). 
-  We usually set flex-basis to the minimum length we find acceptable 
-  for an element. If we set it to 100% and at the same time have 
-  flex-wrap set to wrap , we can force individual elements to take 
-  up an entire line creating neat stacks of elements. */
   flex-basis: 25rem;
-
-  /* We need to "Position: relative", So we can put another element 
-    div on top of it as "Position: absolute" */
   position: relative;
   text-align: center;
 
@@ -65,10 +91,6 @@
   flex-basis: 25rem;
   border-radius: 80%;
   box-shadow: 5px 10px 15px rgba(0, 0, 0, 1);
-
-  // &:hover img {
-  //   transform: scale(1.2); /* Zoom in by 20% on hover */
-  // }
 }
 
 .profileImg img {
@@ -76,7 +98,6 @@
   width: 100%;
   object-fit: cover;
   border-radius: 50%;
-  // transition: transform 0.3s ease-in-out; /* Smooth zoom animation */
 }
 
 .explore {

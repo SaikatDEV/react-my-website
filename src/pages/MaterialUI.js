@@ -6,7 +6,7 @@ import MaterialTileUI from "../components/MaterialTileUI";
 const MaterialUI = () => {
   return (
     <div className="mt-32">
-      <MaterialHeader />
+      {/*<MaterialHeader />*/}
       <MaterialTableUI />
       <MaterialTileUI />
       {/*<MaterialBody />*/}

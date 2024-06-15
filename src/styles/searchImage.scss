@@ -28,10 +28,13 @@
 
   .search-form {
     margin-bottom: 1rem;
+
     input {
       font-size: 1rem;
       padding: 0.5rem 1rem;
+      color: black;
     }
+
     button {
       padding: 0.5rem 1rem;
       margin-left: 0.5rem;
@@ -46,5 +49,63 @@
     margin-left: 0.5rem;
     font-size: 1rem;
     border: none;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 2rem 5rem;
+
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .search-form {
+      input {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+      }
+
+      button {
+        padding: 0.5rem;
+        margin-left: 0.25rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    .more {
+      padding: 0.5rem;
+      margin-left: 0.25rem;
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    margin-top: 16rem;
+    padding: 1rem;
+
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .search-form {
+      input {
+        color: black;
+        font-size: 1rem;
+        padding: 0.25rem;
+      }
+
+      button {
+        padding: 0.25rem;
+        margin-left: 0.25rem;
+        font-size: 0.75rem;
+      }
+    }
+
+    .more {
+      padding: 0.25rem;
+      margin-left: 0.25rem;
+      font-size: 0.75rem;
+    }
   }
 }
