@@ -1,0 +1,23 @@
+{
+  "tripA": {
+    "id": "tripA",
+    "locations": [
+      { "name": "Location1", "time": "09:00 AM" },
+      { "name": "Location2", "time": "11:00 AM" }
+    ]
+  },
+  "tripB": {
+    "id": "tripB",
+    "locations": [
+      { "name": "Location3", "time": "10:00 AM" },
+      { "name": "Location4", "time": "01:00 PM" }
+    ]
+  },
+  "tripC": {
+    "id": "tripC",
+    "locations": [
+      { "name": "Location5", "time": "08:30 AM" },
+      { "name": "Location6", "time": "12:00 PM" }
+    ]
+  }
+}

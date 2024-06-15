@@ -20,7 +20,7 @@ const SampleProjects = () => {
               </b>
               <p className="text-lg">
                 (This will fetch games data from open source games API. Used:
-                Axios, Redux, Jsx, JS, Scss)
+                Axios, Redux, Scss)
               </p>
             </Link>
 
@@ -29,8 +29,7 @@ const SampleProjects = () => {
                 <u>Search For any Images:</u>
               </b>
               <p className="text-lg">
-                (This will fetch images from open source API. Used: Axios,
-                UseState, Jsx, Scss, Js)
+                (This will fetch images from open source API. Used: Axios, Scss)
               </p>
             </Link>
 
@@ -38,23 +37,21 @@ const SampleProjects = () => {
               <b>
                 <u>Material UI Project</u>
               </b>
-              <p className="text-lg">
-                (Used: MaterialUI, Jsx, Js, TailwindCss)
-              </p>
+              <p className="text-lg">(Used: MaterialUI, TailwindCss)</p>
             </Link>
 
             <Link to="/tailwind">
               <b>
                 <u>TailwindCSS Project</u>
               </b>
-              <p className="text-lg">(Used: Jsx, TailwindCss, Js)</p>
+              <p className="text-lg">(Used: TailwindCss)</p>
             </Link>
 
-            <Link to="/">
+            <Link to="/myPlanner">
               <b>
-                <u>More:</u>
+                <u>Planner Project</u>
               </b>
-              <p className="text-lg">(In Progress....)</p>
+              <p className="text-lg">(Used: MaterialUI, Tailwind)</p>
             </Link>
           </div>
         </div>
