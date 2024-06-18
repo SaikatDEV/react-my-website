@@ -54,8 +54,22 @@
   }
 
   @media (max-width: 480px) {
-    .profileImg {
+    .container {
+      padding: 4rem 1rem 0rem 1rem;
+    }
+
+    .background-overlay {
       display: none;
+    }
+
+    .profileImg {
+      max-height: 30vh;
+    }
+
+    .explore {
+      padding: 0.5rem 1rem;
+      position: absolute;
+      top: 0%;
     }
   }
 }
