@@ -100,3 +100,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 8. Drag zip file to the public_html
 9. Extract the zip file > Makesure move all the files into the public_html folder
 10. Delete zip file
+
+### Connect to the Database server:
+
+### installl mysql client:
+
+npm install mysql2

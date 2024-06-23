@@ -12,31 +12,43 @@ import Certifications from "./pages/ExploreCertifications";
 import MaterialUI from "./pages/MaterialUI";
 import TailwindProject from "./pages/TailwindProject";
 import MyPlanner from "./pages/MyPlanner";
+import Trip from "./pages/Trip";
+import LoginPage from "./components/LoginPage"; // Add your login page
+import { AuthProvider } from "./contexts/AuthContext";
+import PrivateRoute from "./components/PrivateRoute";
 
 // Router
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="App">
-      <NavBar />
-      <Routes>
-        <Route path="/" exact element={<AboutUs />} />
-        <Route path="/projects" exact element={<AllProjects />} />
-        <Route path="/projects/:id" exact element={<GameDetails />} />
-        <Route path="/searchImage" exact element={<SearchImage />} />
-        <Route path="/materialUI" exact element={<MaterialUI />} />
-        <Route path="/myPlanner" exact element={<MyPlanner />} />
-        <Route path="/tailwind" exact element={<TailwindProject />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/certifications" element={<Certifications />} />
-        <Route element={<AboutUs />} />
-      </Routes>
-    </div>
+    <AuthProvider>
+      <div className="App">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<AboutUs />} />
+          <Route path="/projects" element={<AllProjects />} />
+          <Route path="/projects/:id" element={<GameDetails />} />
+          <Route path="/searchImage" element={<SearchImage />} />
+          <Route path="/materialUI" element={<MaterialUI />} />
+          <Route path="/myPlanner" element={<MyPlanner />} />
+          <Route
+            path="/trip"
+            element={
+              <PrivateRoute>
+                <Trip />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/tailwind" element={<TailwindProject />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/certifications" element={<Certifications />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="*" element={<AboutUs />} />
+        </Routes>
+      </div>
+    </AuthProvider>
   );
 };
 
-// <Route path="/projects" exact element={<AllProjects />} />
-// export as below,
-// So we can export the App() function to index.js or any other page
 export default App;

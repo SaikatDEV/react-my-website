@@ -51,9 +51,18 @@ const SampleProjects = () => {
 
             <Link to="/myPlanner">
               <b>
-                <u>Planner Project</u>
+                <u>Trip Itinerary</u>
               </b>
               <p className="text-lg">(Used: MaterialUI, Tailwind)</p>
+            </Link>
+            <Link to="/login">
+              <b>
+                <u>Update Trip Itinerary</u>
+              </b>
+              <p className="text-lg">
+                Need to log-in for making any updates on the trip. <br /> (Used:
+                MaterialUI, Tailwind)
+              </p>
             </Link>
           </div>
         </div>
