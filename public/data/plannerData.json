@@ -1,9 +1,6 @@
 {
   "tripA": {
     "id": "tripA",
-    "locations": [
-      { "name": "Location1", "time": "09:00 AM" },
-      { "name": "Location2", "time": "11:00 AM" }
-    ]
+    "locations": [{ "name": "Location1", "time": "09:00 AM" }]
   }
 }

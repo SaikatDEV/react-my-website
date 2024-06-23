@@ -161,7 +161,7 @@ const Trip = () => {
 
   const handleTitleBlur = (tripKey, newTitle) => {
     if (newTitle == "") {
-      handleEditTripTitle(tripKey, tripKey);
+      handleEditTripTitle(tripKey, "Please add Trip name");
     } else {
       handleEditTripTitle(tripKey, newTitle);
     }
@@ -298,7 +298,7 @@ const Trip = () => {
                 <TableRow>
                   <TableCell>Location</TableCell>
                   <TableCell>Time</TableCell>
-                  <TableCell></TableCell>
+                  <TableCell>Modify/Delete?</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
