@@ -1,0 +1,14 @@
+{
+  "plannerData": [
+    {
+      "title": "tripA",
+      "id": 1,
+      "locations": [
+        {
+          "name": "Location1",
+          "time": "09:00 AM"
+        }
+      ]
+    }
+  ]
+}

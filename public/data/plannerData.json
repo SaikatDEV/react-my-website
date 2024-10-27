@@ -1,6 +1,0 @@
-{
-  "tripA": {
-    "id": "tripA",
-    "locations": [{ "name": "Location1", "time": "09:00 AM" }]
-  }
-}

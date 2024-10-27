@@ -8,7 +8,7 @@ import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import { BrowserRouter } from "react-router-dom";
 // REDUX set up----------------------------
 import { configureStore, applyMiddleware, compose } from "@reduxjs/toolkit";
-import rootRouter from "./reducers";
+// import rootRouter from "./reducers";
 import rootReducer from "./reducers";
 // This below is a redux connection with the app
 import { Provider } from "react-redux";
@@ -16,8 +16,8 @@ import { Provider } from "react-redux";
 import { thunk } from "redux-thunk";
 
 // We will use this if we dont need thunk
-const devToolExt =
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+// const devToolExt =
+//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 
 // We need this for thunk, So we can use applymiddleware for thunk
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
