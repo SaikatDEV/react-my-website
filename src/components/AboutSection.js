@@ -26,7 +26,7 @@ const AboutSection = () => {
         <a
           href="https://docs.google.com/document/d/1CtdfXebvplwk0VU0mjf9Q3sI3qIhjWiD/edit"
           target="_blank"
-          className="explore navButton"
+          className="explore navButton" rel="noreferrer"
         >
           Resume
         </a>

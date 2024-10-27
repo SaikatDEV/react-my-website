@@ -9,27 +9,27 @@ const ContactUs = () => {
         <h3>
           <a
             href="https://www.linkedin.com/in/saikat-barua-mcitp-icp-csm/"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             LinkedIn
           </a>
         </h3>
 
         <h3>
-          <a href="https://github.com/SaikatDEV" target="_blank">
+          <a href="https://github.com/SaikatDEV" target="_blank" rel="noreferrer">
             Github
           </a>
         </h3>
         <h3>
           <a
             href="https://stackoverflow.com/users/3434387/asm?tab=profile"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             StackOverflow
           </a>
         </h3>
         <h3>
-          <a href="mailto:devsaikat00@gmail.com" target="_blank">
+          <a href="mailto:devsaikat00@gmail.com" target="_blank" rel="noreferrer">
             Email
           </a>
         </h3>
