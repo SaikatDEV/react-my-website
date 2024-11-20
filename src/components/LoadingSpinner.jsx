@@ -19,7 +19,7 @@ const LoadingSpinner = () => {
       />
 
       {/* Loading text */}
-      <p className="absolute mt-20 text-lg font-semibold text-gray-700 ">
+      <p className="absolute mt-20 text-lg font-semibold text-gray-700 dark:text-offwhite">
         Loading...
       </p>
     </div>
