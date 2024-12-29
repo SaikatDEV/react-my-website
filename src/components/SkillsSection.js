@@ -16,7 +16,8 @@ const SkillsSection = () => {
                 <u>Languages:</u>
               </b>
               <p className="text-lg">
-                Java, Ruby, Groovy, SQL, PL-SQL, Shell Scripting, Python
+                Javascript, Typescript, Java, Ruby, Groovy, SQL, PL-SQL, Shell
+                Scripting, Python
               </p>
             </li>
             <li>
@@ -51,7 +52,7 @@ const SkillsSection = () => {
                 <u>Testing Tools:</u>
               </b>
               <p className="text-lg">
-                Selenium WebDriver, Playwright, Quality Center, QTP, RFT
+                Jest, Selenium WebDriver, Playwright etc
               </p>
             </li>
             <li>

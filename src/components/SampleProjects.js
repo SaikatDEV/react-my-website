@@ -26,6 +26,13 @@ const SampleProjects = () => {
             </Link>
                 */}
 
+            <a href="https://buddhistcampus.netlify.app/" target="_blank">
+              <b>
+                <u>Buddhist Campus Website</u>
+              </b>
+              <p className="text-lg">(Used: Javascript, MUI, Tailwind etc)</p>
+            </a>
+
             <Link to="/searchImage">
               <b>
                 <u>Search For any Images:</u>
@@ -33,20 +40,6 @@ const SampleProjects = () => {
               <p className="text-lg">
                 (This will fetch images from open source API. Used: Axios, Scss)
               </p>
-            </Link>
-
-            <Link to="/materialUI">
-              <b>
-                <u>Material UI Project</u>
-              </b>
-              <p className="text-lg">(Used: MaterialUI, TailwindCss)</p>
-            </Link>
-
-            <Link to="/tailwind">
-              <b>
-                <u>TailwindCSS Project</u>
-              </b>
-              <p className="text-lg">(Used: TailwindCss)</p>
             </Link>
 
             <Link to="/myPlanner">
@@ -57,7 +50,7 @@ const SampleProjects = () => {
             </Link>
             <Link to="/login">
               <b>
-                <u>Update Trip Itinerary</u>
+                <u>Login to update Trip Itinerary</u>
               </b>
               <p className="text-lg">
                 Need to log-in for making any updates on the trip. <br /> (Used:
