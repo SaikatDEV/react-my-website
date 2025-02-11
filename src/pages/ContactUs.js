@@ -30,13 +30,18 @@ const ContactUs = () => {
           <a
             href="https://stackoverflow.com/users/3434387/asm?tab=profile"
             target="_blank"
+            rel="noreferrer"
           >
             <img src={stackoverflow} alt="Stackoverflow" />
           </a>
         </li>
 
         <li data-tooltip="Email">
-          <a href="mailto:devsaikat00@gmail.com" target="_blank">
+          <a
+            href="mailto:devsaikat00@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={email} alt="Email" />
           </a>
         </li>

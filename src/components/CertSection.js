@@ -56,7 +56,7 @@ const CertSection = () => {
         </div>
       </div>
       <div className="background-overlay">
-        <img src={background} alt="Background Image" />
+        <img src={background} alt="Background Image 2" />
       </div>
     </div>
   );

@@ -5,9 +5,7 @@ import "../styles/searchImage.scss";
 import axios from "axios";
 
 const SearchImage = () => {
-  let searchValue;
   let pageNumber = 1;
-  let moreSearchInput;
   let perPageItemCnt = 12;
   let randomNumber = Math.floor(Math.random() * 100 + 1);
 

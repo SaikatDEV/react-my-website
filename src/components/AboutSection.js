@@ -28,15 +28,17 @@ const AboutSection = () => {
             <br /> <br />
             <span>
               As well expert on designing Test Automation Framework from scratch
-              using Selenium or framework like GEB-Spock, Cucumber BDD using
-              Ruby/Java, Serenity-BDD, PlayWright, Karate, Rspec, Junit/TestNG,
-              RestAssured API, Jmeter, QTP. As well experienced on AWS, CI-CD
-              environment using Jenkins, Bamboo, Saucelabs, gitLab etc.
+              using Selenium or any other framework like GEB-Spock, Cucumber BDD
+              using Ruby/Java, Serenity-BDD, PlayWright-Java, Karate, Rspec,
+              Java Junit/TestNG, RestAssured API, Jmeter, UiPath, Jest etc. As
+              well experienced on AWS, CI-CD environment using Jenkins, Bamboo,
+              Saucelabs etc.
             </span>
           </p>
           <a
             href="mailto:devsaikat00@gmail.com?subject=Request%20for%20resume"
             target="_blank"
+            rel="noreferrer"
             className="explore navButton"
           >
             Request for Resume

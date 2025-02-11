@@ -19,7 +19,7 @@ const ExploreCertifications = () => {
           </p>
         </div>
         <div className="certImg">
-          <img src={mcitp} alt=""></img>
+          <img src={mcitp} alt="MCITP logo"></img>
         </div>
       </div>
 
@@ -32,7 +32,7 @@ const ExploreCertifications = () => {
           </p>
         </div>
         <div className="certImg">
-          <img src={csm} alt=""></img>
+          <img src={csm} alt="CSM logo"></img>
         </div>
       </div>
 
@@ -45,7 +45,7 @@ const ExploreCertifications = () => {
           </p>
         </div>
         <div className="certImg">
-          <img src={security} alt=""></img>
+          <img src={security} alt="Security logo"></img>
         </div>
       </div>
 
