@@ -38,6 +38,7 @@ const AboutSection = () => {
           <a
             href="https://docs.google.com/document/d/1CtdfXebvplwk0VU0mjf9Q3sI3qIhjWiD/edit"
             target="_blank"
+            rel="noreferrer"
             className="explore navButton"
           >
             Resume

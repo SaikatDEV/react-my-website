@@ -76,7 +76,7 @@ const GameDetails = () => {
           </div>
         </div>
         <div className="media">
-          <a href={gameDetails.website} target="_blank">
+          <a href={gameDetails.website} target="_blank" rel="noreferrer">
             <img src={gameDetails.background_image} alt={gameDetails.name} />
           </a>
         </div>

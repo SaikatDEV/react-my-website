@@ -16,7 +16,7 @@ const TailwindProject = () => {
             <img
               className="rounded-md h-32 w-32 sm:h-24 sm:w-24"
               src={asm}
-              alt="ASM"
+              alt="ASM logo"
             />
             <img className="w-24 sm:w-16" src={apple} alt="Apple Logo" />
           </div>
