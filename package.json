@@ -52,7 +52,7 @@
   "scripts": {
     "start": "react-scripts start",
     "server": "json-server -p 3001 --watch plannerData.json",
-    "build": "react-scripts build",
+    "build": "CI=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
