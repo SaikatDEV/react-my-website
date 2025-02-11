@@ -30,8 +30,8 @@ const AboutSection = () => {
               As well expert on designing Test Automation Framework from scratch
               using Selenium or any other framework like GEB-Spock, Cucumber BDD
               using Ruby/Java, Serenity-BDD, PlayWright-Java, Karate, Rspec,
-              Java Junit/TestNG, RestAssured API, Jmeter, QTP. As well
-              experienced on AWS, CI-CD environment using Jenkins, Bamboo,
+              Java Junit/TestNG, RestAssured API, Jmeter, UiPath, Jest etc. As
+              well experienced on AWS, CI-CD environment using Jenkins, Bamboo,
               Saucelabs etc.
             </span>
           </p>
